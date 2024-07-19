@@ -60,6 +60,7 @@ void quick_sort_helper(int *array, int start, int end, size_t size)
 	if (start < end)
 	{
 		int pi = partition(array, start, end, size);
+
 		quick_sort_helper(array, start, pi - 1, size);
 		quick_sort_helper(array, pi + 1, end, size);
 	}
