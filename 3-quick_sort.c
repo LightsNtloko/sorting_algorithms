@@ -6,13 +6,14 @@
  * @c: The first element
  * @d: The second element
  */
-void swap(int *c, int *d)
+void swap(int *c, int *d, int *array, size_t size)
 {
 	if (*c != *d)
 	{
 		int temp = *c;
 		*c = *d;
 		*d = temp;
+		print_array(array, size);
 	}
 }
 
@@ -37,16 +38,14 @@ int partition(int *array, int start, int end, size_t size)
 		{
 			if (a != b)
 			{
-				swap(&array[a], &array[b]);
-				print_array(array, size);
+				swap(&array[a], &array[b], array, size);
 			}
 			a++;
 		}
 	}
 	if (a != end)
 	{
-		swap(&array[a], &array[end]);
-		print_array(array, size);
+		swap(&array[a], &array[end], array, size);
 	}
 	return (a);
 }
