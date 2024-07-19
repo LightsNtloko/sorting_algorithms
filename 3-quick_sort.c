@@ -5,6 +5,8 @@
  * swap - The function that swaps two elements in an array
  * @c: The first element
  * @d: The second element
+ * @array: The array to be printed
+ * @size: The size of the array
  */
 void swap(int *c, int *d, int *array, size_t size)
 {
