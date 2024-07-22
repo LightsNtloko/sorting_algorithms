@@ -1,0 +1,11 @@
+in the best case
+O(n) - when the list is already sorted, a single forward and backward pass is
+enough.
+
+in the average case
+O(n^2) - the average time complexity involves multiple passes where each pass
+involves a linear scan, leading to a quadratic time complexity in most cases.
+
+in the worst case
+O(n^2) - the worst-case scenario occurs when the list is in reverse order,
+requiring a maximum number of swaps and passes to sort the list.
