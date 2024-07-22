@@ -37,15 +37,15 @@ void swap_nodes(listint_t **list, listint_t *a, listint_t *b)
 }
 
 /**
- * cocktail_forward_pass - The function that performs the forward pass of
- * Cocktail shaker sort algorithm.
+ * forward_pass - The function that performs the forward pass of Cocktail shaker
+ * sort algorithm.
  * @list: The pointer to the head of the list
  * @start: The starting node
  * @end: The ending node
  *
  * Return: 1 if nodes were swapped, 0 otherwise
  */
-int cocktail_forward_pass(listint_t **list, listint_t **start, listint_t **end)
+int forward_pass(listint_t **list, listint_t **start, listint_t **end)
 {
 	int swapped = 0;
 	listint_t *current = *start;
@@ -67,16 +67,15 @@ int cocktail_forward_pass(listint_t **list, listint_t **start, listint_t **end)
 }
 
 /**
- * cocktail_backward_pass - The function that performs the backward pass of
- * Cocktail shaker sort algorithm.
+ * backward_pass - The function that performs the backward pass of Cocktail
+ * shaker sort algorithm.
  * @list: The pointer to the head of the list
  * @start: The starting node
  * @end: The ending node
  *
  * Return: 1 if nodes were swapped, 0 otherwise
  */
-int cocktail_backward_pass(listint_t **list, listint_t **start, listint_t
-		**end)
+int backward_pass(listint_t **list, listint_t **start, listint_t **end)
 {
 	int swapped = 0;
 	listint_t *current = *end;
@@ -114,11 +113,11 @@ void cocktail_sort_list(listint_t **list)
 	}
 	while (swapped)
 	{
-		swapped = cocktail_forward_pass(list, &start, &end);
+		swapped = forward_pass(list, &start, &end);
 		if (!swapped)
 		{
 			break;
 		}
-		swapped = cocktail_backward_pass(list, &start, &end);
+		swapped = backward_pass(list, &start, &end);
 	}
 }

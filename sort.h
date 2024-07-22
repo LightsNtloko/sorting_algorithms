@@ -29,10 +29,8 @@ int partition(int *array, int start, int end, size_t size);
 void quick_sort_helper(int *array, int start, int end, size_t size);
 void shell_sort(int *array, size_t size);
 void cocktail_sort_list(listint_t **list);
-int cocktail_backward_pass(listint_t **list, listint_t **start, listint_t
-		**end);
-int cocktail_forward_pass(listint_t **list, listint_t **start, listint_t
-		**end);
+int cocktail_backward_pass(listint_t **list, listint_t **start, listint_t **end);
+int cocktail_forward_pass(listint_t **list, listint_t **start, listint_t **end);
 void swap_nodes(listint_t **list, listint_t *a, listint_t *b);
 
 #endif /* SORT_T */
