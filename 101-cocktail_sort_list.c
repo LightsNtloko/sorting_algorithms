@@ -85,7 +85,7 @@ int cocktail_sort_backward(listint_t **list, listint_t **start, listint_t
 			current = current->prev;
 		}
 	}
-	*start = (*start)->next;
+	*start = current;
 	return (swapped);
 }
 
