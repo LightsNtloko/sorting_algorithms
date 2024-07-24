@@ -33,5 +33,11 @@ int cocktail_sort_backward(listint_t **list, listint_t **start, listint_t
 		**end);
 int cocktail_sort_forward(listint_t **list, listint_t **start, listint_t
 		**end);
+void counting_sort(int *array, size_t size);
+int find_maximum(int *array, size_t size);
+void init_count_array(int *count, int maximum);
+void fill_count_array(int *array, int *count, size_t size);
+void cumulative_count(int *count, int maximum);
+void counting_sort(int *array, size_t size);
 
 #endif /* SORT_T */
